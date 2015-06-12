@@ -45,8 +45,7 @@ module.exports = function(grunt) {
             extractNumbersFields(locales)
         );
 
-        Object.keys(locData).forEach(function (locale) {
-
+        Object.keys(locData).filter(function(l){return ["en","de","fr","it"].indexOf(l.split("-")[0]) >= 0;}).forEach(function (locale) {
             // Ignore en-US-POSIX and root
             if (locale.toLowerCase() === 'en-us-posix') {
                 return;
