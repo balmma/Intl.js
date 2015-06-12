@@ -50,7 +50,7 @@ var ALL_LOCALES_HASH =
     }, {});
 
 function getAllLocales() {
-    return Object.keys(ALL_LOCALES_HASH);
+    return Object.keys(ALL_LOCALES_HASH).filter(function(l){return ["en","de","fr","it"].indexOf(l.split("-")[0]) >= 0;});
 }
 
 function getParentLocale(locale) {

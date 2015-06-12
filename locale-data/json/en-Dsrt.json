@@ -763,20 +763,20 @@
                     "narrow": [
                         "BCE",
                         "CE",
-                        "CE",
-                        "BCE"
+                        "BCE",
+                        "CE"
                     ],
                     "short": [
                         "BCE",
                         "CE",
-                        "CE",
-                        "BCE"
+                        "BCE",
+                        "CE"
                     ],
                     "long": [
                         "BCE",
                         "CE",
-                        "CE",
-                        "BCE"
+                        "BCE",
+                        "CE"
                     ]
                 },
                 "dayPeriods": {

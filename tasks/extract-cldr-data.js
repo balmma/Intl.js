@@ -45,9 +45,9 @@ module.exports = function(grunt) {
             extractNumbersFields(locales)
         );
 
-        Object.keys(locData).filter(function(l){return ["en","de","fr","it"].indexOf(l.split("-")[0]) >= 0;}).forEach(function (locale) {
+        locales.forEach(function (locale) {
             // Ignore en-US-POSIX and root
-            if (locale.toLowerCase() === 'en-us-posix') {
+            if (!locData[locale] || locale.toLowerCase() === 'en-us-posix') {
                 return;
             }
 
@@ -58,7 +58,7 @@ module.exports = function(grunt) {
             grunt.file.write('locale-data/jsonp/' + locale + '.js', jsonpContent);
         });
 
-        grunt.log.writeln('Total number of locales is ' + Object.keys(locData).length);
+        grunt.log.writeln('Total number of locales is ' + locales.length);
     });
 
 };
